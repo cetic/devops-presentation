@@ -1,7 +1,10 @@
 /* global module:false */
 module.exports = function(grunt) {
-	var port = grunt.option('port') || 8000;
+	var port = grunt.option('port') || 8080;
 	var base = grunt.option('base') || '.';
+	var hostname = grunt.option('hostname') || '0.0.0.0';
+	
+	
 
 	// Project configuration
 	grunt.initConfig({
@@ -94,6 +97,7 @@ module.exports = function(grunt) {
 				options: {
 					port: port,
 					base: base,
+					hostname: hostname,
 					livereload: true,
 					open: true
 				}
