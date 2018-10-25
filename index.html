@@ -33,7 +33,7 @@
 				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 					<script type="text/template">
 						###Who am I?
-						<img class="plain" data-src="img/who.jpg" />
+						<img class="plain" width=auto height=auto data-src="img/who.jpg" />
 						* Alexandre Nuttinck
 						* Research Engineer - Cloud Computing - SST Departement@CETIC
 						* alexandre.nuttinck@cetic.be
@@ -43,15 +43,15 @@
 				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 					<script type="text/template">
 						###Where I work?
-						<img class="plain" data-src="img/ceticbusiness.jpg" />
+						<img class="plain" width=70% height=auto data-src="img/ceticbusiness.jpg" />
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 					<script type="text/template">
 						#Summary
 						## What is DevOps?
-						## What problems does DevOps address?
-						## What can DevOps do for you and How?
+						## DevOps: 3 Pillars
+						## DevOps: Tools
 						
 Slides are available here: https://devops-presentation.openshift.cetic.be
 					</script>
@@ -59,41 +59,59 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 				<section>
 				    <section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							### A long time ago... Not so far away
+							### DevOps Origins
 							
-							* OFF-THE-SHELF: Fournisseur livre un produit à installer - INFRASTRUCTURE CLIENT Déploiement par le client sur son infrastructure
+							<img class="plain" width=40% height=auto data-src="img/devcycle.jpg" />	<img class="plain" width=40% height=auto data-src="img/flows.jpg" />
+							
+							<!--* Everything needs software nowadays.-->
+							<!--* Software has to run on a server to become a service.-->
+							<!--* Delivering a service from inception to its users is too slow and errorprone.-->
+							<!--* There are internal friction points that make this the case.-->
+							<!--* This loses you money. (delay = loss)-->
+							<!--* IT is frequently the bottleneck in the transition of “concept to cash. -->
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							### Now
+							### DevOps Origins
 							
-							* OFF-THE-SHELF: Fournisseur livre un produit à installer - INFRASTRUCTURE CLIENT Déploiement par le client sur son infrastructure
+							<img class="plain" width=auto height=auto data-src="img/release-frequency.jpg" />	
+							
+							<b>Need to reduce the deployment</b>
+							
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							### Problems we face today
+							### DevOps Origins
 							
-							* Everything needs software nowadays.
-							* Software has to run on a server to become a service.
-							* Delivering a service from inception to its users is too slow and errorprone.
-							* There are internal friction points that make this the case.
-							* This loses you money. (delay = loss)
-							* IT is frequently the bottleneck in the transition of “concept to cash.
+							System admins: Before
+							
+							<img class="plain" width=50% height=auto data-src="img/honda.jpg" />	
+							
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">
-							* Defects are released into production, causing outages
-							* Inability to diagnose production issues quickly
-							* Problems appear in some environments only
-							* Blame shifting/finger pointing
-							* Long delays while dev, QA, or another team waits on resource or response from other teams
-							* “Manual error” is a commonly cited root cause
-							* Releases slip/fail
-							* Quality of life issues in IT
-							</script>
+						<script type="text/template">
+							### DevOps Origins
+							
+							System admins: Today
+							
+							* they no longer control infrastructure (Cloud / Virtualization)
+							* more complex software deployments
+							* more and more restrictive SLAs	
+
+							<b>Need to automate the deployment</b>			
+
+							<!--* Defects are released into production, causing outages-->
+							<!--* Inability to diagnose production issues quickly-->
+							<!--* Problems appear in some environments only-->
+							<!--* Blame shifting/finger pointing-->
+							<!--* Long delays while dev, QA, or another team waits on resource or response from other teams-->
+							<!--* “Manual error” is a commonly cited root cause-->
+							<!--* Releases slip/fail-->
+							<!--* Quality of life issues in IT-->	
+						</script>
 					</section>
 				</section>
 				<section>
@@ -120,9 +138,25 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 					</section>	
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							## The idea: adding OPS to the agile team
+							### The idea: adding OPS to the DEV team
 							
-							<img class="plain" data-src="img/devops.png" />
+							<img class="plain" width=70% height=auto data-src="img/devops1.png" />
+							
+						</script>
+					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							### The idea: adding OPS to the DEV team
+							
+							<img class="plain" width=70% height=auto data-src="img/devops2.png" />
+							
+						</script>
+					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							### The idea: adding OPS to the DEV team
+							
+							<img class="plain" width=70% height=auto data-src="img/devops3.png" />
 							
 						</script>
 					</section>
@@ -160,45 +194,20 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 							
 							## DevOps Tooling
 					
-							<img class="plain" data-src="img/devops-tools.png" />
+							<img class="plain" width=80% height=auto data-src="img/devops-tools.png" />
 							
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							<img class="plain" data-src="img/landscape.png" />
-
+							
+							<img class="plain" width=75% height=auto data-src="img/landscape.png" />
+							
 							https://landscape.cncf.io/
-						</script>
-					</section>	
-				</section>
-				
-				<section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							
-							## Infrastructure Automation Tooling
-					
-							* Infrastructure Models - AWS Cloudformation, Terraform, Azure ARM Templates, Ubuntu Juju
-							* Hardware Provisioning - Packer, Foreman, MaaS, Cobbler, Crowbar, Digital Rebar
-							* Configuration Management - Puppet, Chef, Ansible, Salt, ...
-							* Integration Testing - rspec, serverspec
-							* Orchestration - Rundeck, Ansible, Kubernetes (for docker)
-							
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							## Special Topics
-							
-							* Immutable deployment with docker
-							* Serverless with AWS Lambda/Azure Functions/Google Cloud Functions
-							* Single model for infra and apps is best (Kubernetes)
 							
 						</script>
 					</section>	
 				</section>
-				
 				<section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
@@ -239,23 +248,13 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							## THE CD PIPELINE
-							* Only build artifacts once
-							* Artifacts should be immutable
-							* Deployment should go to a copy of production before going into production
-							* Stop deploys if it a previous step fails
-							* Deployments should be idempotent							
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
 							## CI/CD tooling
 							* Version Control (git, others, doesn’t matter as long as you use it)
 							* CI System (jenkins, Gitlab CI, circleCI, travisCI, ...)
 							* Build (whatever your platform needs - make/rake, maven, gulp, packer)
 							* Test (*unit, robot/protractor, cucumber)
 							* Artifact Repository (artifactory, nexus, docker repository, ...)
-▸							* Deployment (ansible, your CM system)					
+							* Deployment (ansible, your CM system)					
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
@@ -286,26 +285,146 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
 								### .gitlab-ci.yml file
-								<img class="plain" data-src="img/gitlab-ci.png" />
+								<img class="plain" width=65% height=auto data-src="img/gitlab-ci.png" />
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
 								### Gitlab Status
-								<img class="plain" data-src="img/gitlab-status.png" />
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-								### Gitlab Runner
-																
-								A runner is basically a server that <b>executes</b> instructions listed in the .gitlab-ci.yml file, and reports the result back to GitLab itself. 
+								<img class="plain" width=80% height=auto data-src="img/gitlab-status.png" />
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
 								### Jenkins
-								<img class="plain" data-src="img/jenkins-ui.png" />
+								<img class="plain" width=80% height=auto data-src="img/jenkins-ui.png" />
+						</script>
+					</section>
+				</section>
+				<section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							
+							## Infrastructure Automation Tooling
+					
+							* Infrastructure Models - AWS Cloudformation, Terraform, Azure ARM Templates, Ubuntu Juju
+							* Hardware Provisioning - Packer, Foreman, MaaS, Cobbler, Crowbar, Digital Rebar
+							* Configuration Management - Puppet, Chef, Ansible, Salt, ...
+							* Integration Testing - rspec, serverspec
+							* Orchestration - Rundeck, Ansible, Kubernetes (for docker)
+							
+						</script>
+					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							
+							## Infrastructure Automation
+							
+							<img class="plain" width=20% height=auto data-src="img/terraform.png" />	
+							* infrastructure as code software by HashiCorp. 
+							* allows to define a datacenter infrastructure in a high-level configuration language (JSON)
+							* execution plan to build the infrastructure
+								* OpenStack (Private)
+								* service provider (Public) such as AWS, Microsoft Azure, Google Cloud Platform, ...
+						</script>
+					</section>	
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							
+							## Terraform
+						
+						
+						provider "aws" {
+						  access_key = "ACCESS_KEY_HERE"
+						  secret_key = "SECRET_KEY_HERE"
+						  region     = "us-east-1"
+						}
+
+						resource "aws_instance" "example" {
+						  ami           = "ami-2757f631"
+						  instance_type = "t2.micro"
+						}
+													
+						</script>
+					</section>	
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							
+							## Terraform
+						
+						
+						$ terraform apply
+						# ...
+
+						+ aws_instance.example
+						ami:                      "ami-2757f631"
+						availability_zone:        "<computed>"
+						ebs_block_device.#:       "<computed>"
+						ephemeral_block_device.#: "<computed>"
+						instance_state:           "<computed>"
+						instance_type:            "t2.micro"
+						key_name:                 "<computed>"
+						placement_group:          "<computed>"
+						private_dns:              "<computed>"
+						private_ip:               "<computed>"
+						public_dns:               "<computed>"
+						public_ip:                "<computed>"
+						root_block_device.#:      "<computed>"
+						security_groups.#:        "<computed>"
+						source_dest_check:        "true"
+						subnet_id:                "<computed>"
+						tenancy:                  "<computed>"
+						vpc_security_group_ids.#: "<computed>"
+						#...
+						
+						</script>
+					</section>	
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							
+							## Terraform
+						
+						# ...
+						aws_instance.example: Creating...
+						ami:                      "" => "ami-2757f631"
+						instance_type:            "" => "t2.micro"
+						[...]
+
+						aws_instance.example: Still creating... (10s elapsed)
+						aws_instance.example: Creation complete
+
+						Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+						# ...
+						
+						</script>
+					</section>	
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							
+							## Configuration management
+							
+							<img class="plain" width=20% height=auto data-src="img/ansible.png" />
+							
+							Automates: software provisioning, configuration management and application deployment. (via SSH)
+						</script>
+					</section>	
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							## Configuration Management
+							> "Software configuration management (SCM) is the discipline of managing the evolution of large and complex software systems"
+
+							[Tichy 1988]
+						</script>
+					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							## Configuration Management
+							Ensure the consistency and quality of a product through the following:
+							* identification of a system and its parts
+							* controlling change by establishing procedures to be followed when performing a change
+							* configuration status accounting of the development
+							* validation that the right product has been built the right way
 						</script>
 					</section>
 				</section>
@@ -352,38 +471,16 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 				<section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							## Configuration Management
-							> "Software configuration management (SCM) is the discipline of managing the evolution of large and complex software systems"
-
-							[Tichy 1988]
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							## Configuration Management
-							Ensure the consistency and quality of a product through the following:
-							* identification of a system and its parts
-							* controlling change by establishing procedures to be followed when performing a change
-							* configuration status accounting of the development
-							* validation that the right product has been built the right way
-						</script>
-					</section>
-				</section>
-				<section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
 							## Conclusion
 					
-							#### Infrastructure as code
-							* Nécessité d’automatiser les déploiements 
-							* Développer du code de déploiement
-							* Appliquer les méthodes de Software Engineering au code de déploiement
+							* Need to automate deployments (and everything!)
+							* Develop infrastructure code
+							* Apply Software Engineering methods to the infrastructure code
 
-							#### Tools
-							* Vagrant: environnement de test des procédures de déploiement
-							* Ansible: installation des composantes MW nécessaires et configuration de l’OS
-							* Terraform: orchestration d'infrastructure
-							* Gitlab CI: outil pour l'intégration et le déploiement continu
+							* Vagrant: Local Env (for deployment testing and programming)
+							* Ansible: install software and configure OS 
+							* Terraform: infrastructure automation
+							* Gitlab CI: CI/CD process
 							
 						</script>
 					</section>
@@ -393,7 +490,7 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 					
 							#### Benefits
 
-							* Meilleures connaissances des procédures de déploiement
+							*   Meilleures connaissances des procédures de déploiement
 							* Entretenues régulièrement
 							* Partagées entre les DEV et OPS
 
