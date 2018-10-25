@@ -61,7 +61,7 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 						<script type="text/template">
 							### DevOps Origins
 							
-							<img class="plain" width=40% height=auto data-src="img/devcycle.jpg" />	<img class="plain" width=40% height=auto data-src="img/flows.jpg" />
+							<img class="plain" width=35% height=auto data-src="img/devcycle.jpg" />	<img class="plain" width=40% height=auto data-src="img/flows.jpg" />
 							
 							<!--* Everything needs software nowadays.-->
 							<!--* Software has to run on a server to become a service.-->
@@ -75,19 +75,9 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 						<script type="text/template">
 							### DevOps Origins
 							
-							<img class="plain" width=auto height=auto data-src="img/release-frequency.jpg" />	
+							<img class="plain" width=auto height=auto data-src="img/release-frequency.jpg" />
 							
-							<b>Need to reduce the deployment</b>
-							
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							### DevOps Origins
-							
-							System admins: Before
-							
-							<img class="plain" width=50% height=auto data-src="img/honda.jpg" />	
+							<b>Need to reduce the deployment time</b>
 							
 						</script>
 					</section>
@@ -95,11 +85,27 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 						<script type="text/template">
 							### DevOps Origins
 							
-							System admins: Today
+							Pet vs Cattle
 							
-							* they no longer control infrastructure (Cloud / Virtualization)
-							* more complex software deployments
-							* more and more restrictive SLAs	
+							<img class="plain" width=40% height=auto data-src="img/pet.jpg" />	
+							
+							* Unique server, named, known and cared
+							* Sick, we treat it
+							* Damaged, it is repaired
+							
+						</script>
+					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							### DevOps Origins
+							
+							Pet vs Cattle
+							
+							<img class="plain" width=40% height=auto data-src="img/cattle.jpg" />	
+							
+							* No longer control infrastructure (Cloud / Virtualization)
+							* More complex software deployments
+							* More and more restrictive SLAs	
 
 							<b>Need to automate the deployment</b>			
 
@@ -140,6 +146,8 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 						<script type="text/template">
 							### The idea: adding OPS to the DEV team
 							
+							<img class="plain" width=25% height=auto data-src="img/devopsproblem.jpg" />
+							
 							<img class="plain" width=70% height=auto data-src="img/devops0.png" />
 							
 						</script>
@@ -162,28 +170,34 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							## DevOps core 
+							## DevOps core: CAMS
 							
-							Culture – People > Process > Tools
+							<img class="plain" width=auto height=auto data-src="img/cams.jpg" />
 							
-							Automation – Infrastructure as Code
+							<b>Culture</b> – People > Process > Tools
 							
-							Measurement – Measure Everything
+							<b>Automation</b> – Infrastructure as Code
 							
-							Sharing – Collaboration/Feedback
+							<b>Measurement</b> – Measure Everything
 							
+							<b>Sharing</b> – Collaboration/Feedback					
+							
+							http://devopsdictionary.com/wiki/CAMS
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							## DevOps: 3 Pillars
+							## DevOps: the three Pillars
 							
-							Infrastructure Automation
+							<b>Continuous Delivery</b>  – build, test, deploy your apps in a fast and automated manner.
 							
-							Continuous Delivery
+							<b>Infrastructure Automation</b> – create your systems, OS configs, and app deployments as code.
 							
-							Reability Engineering
+							<b>Reliability Engineering</b> – operate your systems; monitoring and orchestration, sure, but also designing for operability in the first place.
 							
+							<img class="plain" width=40% height=auto data-src="img/devops-loop.png" />
+							
+							https://theagileadmin.com/what-is-devops/
 						</script>
 					</section>
 				</section>
@@ -209,13 +223,30 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 					</section>	
 				</section>
 				<section>
+				    <section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							## DevOps: the three Pillars
+							
+							<b>Continuous Delivery</b>  – build, test, deploy your apps in a fast and automated manner.
+							
+							<span style="color:grey"> Infrastructure Automation – create your systems, OS configs, and app deployments as code.</span>
+							
+							<span style="color:grey"> Reliability Engineering – operate your systems; monitoring and orchestration, sure, but also designing for operability in the first place.</span>
+							
+							<img class="plain" width=40% height=auto data-src="img/devops-loop-1.png" />
+							
+							https://theagileadmin.com/what-is-devops/
+						</script>
+					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
 							
 							## Continuous Delivery
+							
+							<img class="plain" width=40% height=auto data-src="img/devops-loop-1.png" />
 					
 							* Integration (CI): Build and Test
-							* Deployment/Delivery (CD): Deploy and integration test
+							* Deployment/Delivery (CD): Deploy and validation
 							
 						</script>
 					</section>
@@ -228,9 +259,9 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 							* Builds should pass the coffee test (< 5 minutes)
 							* Commit really small bits
 							* Don’t leave the build broken
-							* Use a trunk/master based development flow (branch less than a day - use feature flags to branch by abstraction)
+							* Choose a development flow (git flow, ...)
 							* Don't allow flaky tests, fix them!
-							* The build should return a status, a log, and an artifact						
+							* The build should return at least: a status, a log, and an artifact						
 						</script>
 					</section>	
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
@@ -249,12 +280,12 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
 							## CI/CD tooling
-							* Version Control (git, others, doesn’t matter as long as you use it)
-							* CI System (jenkins, Gitlab CI, circleCI, travisCI, ...)
-							* Build (whatever your platform needs - make/rake, maven, gulp, packer)
-							* Test (*unit, robot/protractor, cucumber)
-							* Artifact Repository (artifactory, nexus, docker repository, ...)
-							* Deployment (ansible, your CM system)					
+							* Version Control (Git, others, doesn’t matter as long as you use it)
+							* CI System (Jenkins, Gitlab CI, CircleCI, Travis, ...)
+							* Build (whatever your platform needs - Make/rake, Maven, Gulp, Packer)
+							* Test (*unit, Robot/Protractor, Cucumber)
+							* Artifact Repository (Artifactory, Nexus, dDcker repository, ...)
+							* Deployment (Ansible, your CM system)					
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
@@ -302,17 +333,19 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 					</section>
 				</section>
 				<section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+				    <section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
+							## DevOps: the three Pillars
 							
-							## Infrastructure Automation Tooling
-					
-							* Infrastructure Models - AWS Cloudformation, Terraform, Azure ARM Templates, Ubuntu Juju
-							* Hardware Provisioning - Packer, Foreman, MaaS, Cobbler, Crowbar, Digital Rebar
-							* Configuration Management - Puppet, Chef, Ansible, Salt, ...
-							* Integration Testing - rspec, serverspec
-							* Orchestration - Rundeck, Ansible, Kubernetes (for docker)
+							<span style="color:grey"> Continuous Delivery  – build, test, deploy your apps in a fast and automated manner.</span>
 							
+							<b>Infrastructure Automation</b> – create your systems, OS configs, and app deployments as code.
+							
+							<span style="color:grey"> Reliability Engineering – operate your systems; monitoring and orchestration, sure, but also designing for operability in the first place.</span>
+							
+							<img class="plain" width=40% height=auto data-src="img/devops-loop-2.png" />
+							
+							https://theagileadmin.com/what-is-devops/
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
@@ -320,9 +353,24 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 							
 							## Infrastructure Automation
 							
-							<img class="plain" width=20% height=auto data-src="img/terraform.png" />	
-							* infrastructure as code software by HashiCorp. 
-							* allows to define a datacenter infrastructure in a high-level configuration language (JSON)
+							<img class="plain" width=40% height=auto data-src="img/devops-loop-2.png" />
+					
+							* Provisioning - Terraform, AWS Cloudformation, The Foreman, Digital Rebar, AWX, ...
+							* Configuration Management - Ansible, Puppet, Chef, Salt, ...
+							* Integration Testing (Validation) - Rspec, Serverspec
+							* Orchestration - Rundeck, Ansible, Kubernetes (for Docker)
+							
+							<small><i>Source: DELAET, Thomas, JOOSEN, Wouter, et VANBRABANT, Bart. A survey of system configuration tools. In : Proceedings of the 23rd Large Installations Systems Administration (LISA) conference. Usenix association, 2010. p. 1-14.</i></small>
+						</script>
+					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							
+							## Infrastructure Automation
+							
+							<img class="plain" width=20% height=auto data-src="img/terraform.png" />
+							* infrastructure as code software by HashiCorp.
+							* allows to define a datacenter infrastructure.
 							* execution plan to build the infrastructure
 								* OpenStack (Private)
 								* service provider (Public) such as AWS, Microsoft Azure, Google Cloud Platform, ...
@@ -401,16 +449,6 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 					</section>	
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							
-							## Configuration management
-							
-							<img class="plain" width=20% height=auto data-src="img/ansible.png" />
-							
-							Automates: software provisioning, configuration management and application deployment. (via SSH)
-						</script>
-					</section>	
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
 							## Configuration Management
 							> "Software configuration management (SCM) is the discipline of managing the evolution of large and complex software systems"
 
@@ -427,14 +465,72 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 							* validation that the right product has been built the right way
 						</script>
 					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							
+							## Configuration management: Ansible
+							
+							<img class="plain" width=20% height=auto data-src="img/ansible.png" />
+							
+							Automates: software provisioning, configuration management and application deployment. (via SSH)
+						</script>
+					</section>	
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							
+							## Configuration management: Ansible Playbook
+							
+							```
+							---
+							- hosts: webservers
+							  vars:
+								http_port: 80
+								max_clients: 200
+							  remote_user: root
+							  tasks:
+							  - name: ensure apache is at the latest version
+								yum:
+								  name: httpd
+								  state: latest
+							  - name: write the apache config file
+								template:
+								  src: /srv/httpd.j2
+								  dest: /etc/httpd.conf
+								notify:
+								- restart apache
+							  - name: ensure apache is running
+								service:
+								  name: httpd
+								  state: started
+							  handlers:
+								- name: restart apache
+								  service:
+									name: httpd
+									state: restarted
+							```
+						</script>
+					</section>	
 				</section>
 				<section>
+				    <section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							## DevOps: the three Pillars
+							
+							<span style="color:grey"> Continuous Delivery  – build, test, deploy your apps in a fast and automated manner.</span>
+							
+							<span style="color:grey"> Infrastructure Automation – create your systems, OS configs, and app deployments as code.</span>
+							
+							<b>Reliability Engineering</b> – operate your systems; monitoring and orchestration, sure, but also designing for operability in the first place.
+							
+							https://theagileadmin.com/what-is-devops/
+						</script>
+					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
 							
 							## Reliability Engineering
 					
-							DESIGN FOR OPERATION
+							<b> DESIGN FOR OPERATION </b>
 							* Design patterns exist for creating resilient ystems.
 							* If your app sucks, there’s only so much an ops team can do about it once it’s deployed.
 							* Devs need to take responsibility for their app through deployment.
@@ -443,30 +539,89 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							## Best pratices
+							## Reliability Engineering
+							
+							<b> OPERATE FOR DESIGN </b>
+
+							* Don’t do tasks for people. Build tools so they can do their own work. Ops is now a dev team and the platform is their product.
+							* Automate. This means code, and using coder practices (from source control on)
+							* Build Feedback Paths Back To Dev From Production
+							* Monitoring and metrics - Ensure that monitoring/logging/metrics feed back into dev (and the business)
+						</script>
+					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							## Reliability Engineering: Best pratices
 							
 							Enhance Service Design With Operational Knowledge
 							* Reliability
 							* Performance
 							* Security
-							* Test These
 							* Design Patterns (Release It!, 12-factor apps)
-							Foster a Culture of Responsibility
-							* Whether your code passes test, gets deployed, and stays up for users is your responsibility – not someone else’s
-							Make Development Better With Ops
-							* Productionlike environments
-							* Power tooling - vagrant, etc.					
+							
 						</script>
 					</section>	
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							## OPERATE FOR DESIGN
-							* Build
-							* Measure
-							* Learn
-							* Repeat					
+							## Reliability Engineering: Best pratices
+							
+							Foster a Culture of Responsibility
+							* Whether your code passes test, gets deployed, and stays up for users is your responsibility – not someone else’s		
 						</script>
 					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							## Reliability Engineering: Best pratices
+							
+							Make Development Better With Ops
+							* Productionlike environments
+							* Power tooling - Vagrant, etc.			
+						
+						</script>
+					</section>						
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							## Tool: Vagrant
+							
+							* open-source software product for building and maintaining portable virtual software development environments,
+							* e.g. for VirtualBox
+
+							```
+							$ vagrant init hashicorp/precise64
+							
+							$ vagrant up Bringing machine 'default' up with 'virtualbox' provider... 
+							==> default: Importing base box 'hashicorp/precise64'... 
+							==> default: Forwarding ports...
+							default: 22 (guest) => 2222 (host) (adapter 1) 
+							==> default: Waiting for machine to boot... 
+
+							$ vagrant ssh 
+							vagrant@precise64:~$ _
+							```						
+						</script>
+					</section>	
+										<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							## Vagrant File
+
+							```
+							Vagrant.configure("2") do |config|
+							  config.vm.box = "hashicorp/precise64"
+							  config.vm.provision :shell, path: "bootstrap.sh"
+							  config.vm.network :forwarded_port, guest: 80, host: 4567
+							end
+							```
+
+						</script>
+					</section>	
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							## Vagrant Example
+							
+							<img src=https://adamcod.es/img/posts/vagrant-ansible-lamp.gif width=40%>
+							
+						</script>
+					</section>	
 				</section>
 				<section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
@@ -476,12 +631,10 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 							* Need to automate deployments (and everything!)
 							* Develop infrastructure code
 							* Apply Software Engineering methods to the infrastructure code
-
 							* Vagrant: Local Env (for deployment testing and programming)
 							* Ansible: install software and configure OS 
 							* Terraform: infrastructure automation
 							* Gitlab CI: CI/CD process
-							
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
@@ -516,7 +669,6 @@ Slides are available here: https://devops-presentation.openshift.cetic.be
 
 							Ansible:
 							
-							* Nouveau paradigme : « procédure » => « état »
 							* Diagnostic parfois plus difficile
 							* Choix entre réutilisation de modules tout faits et implémentation from scratch
 						</script>
